@@ -1,5 +1,4 @@
 
-/* General styling */
 * {
     box-sizing: border-box;
 }
@@ -12,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Website header */
 header {
     background-color: #171f2e;
     color: white;
@@ -32,7 +30,7 @@ header p {
     margin-bottom: 0;
 }
 
-/* Navigation menu */
+
 nav {
     background-color: #1c2636;
     text-align: center;
@@ -57,7 +55,7 @@ nav a:hover {
     color: #10151f;
 }
 
-/* Main content */
+
 main {
     max-width: 1150px;
     margin: auto;
@@ -73,7 +71,7 @@ h3 {
     color: #ffffff;
 }
 
-/* Game card layout */
+
 .game-container {
     display: flex;
     flex-wrap: wrap;
@@ -81,7 +79,7 @@ h3 {
     align-items: stretch;
 }
 
-/* Individual game cards */
+
 .game-card {
     background-color: #1b2534;
     flex: 1 1 280px;
@@ -89,7 +87,8 @@ h3 {
     padding: 15px;
     border: 1px solid #303d50;
     border-radius: 12px;
-    overflow: hidden;
+    overflow: visible;
+    height: auto;
     transition: transform 0.3s, border-color 0.3s;
 }
 
@@ -129,12 +128,12 @@ h3 {
     background-color: #24c979;
 }
 
-/* Other links */
+
 main a {
     color: #39e58c;
 }
 
-/* Form fields, if used on Contact page */
+
 input,
 textarea,
 select {
@@ -173,7 +172,6 @@ button:hover {
     transform: translateY(-2px);
 }
 
-/* Mobile responsive design */
 @media (max-width: 600px) {
     header h1 {
         font-size: 30px;
@@ -191,13 +189,25 @@ button:hover {
 
     main {
         padding: 20px 12px;
+        height: auto;
+        overflow: visible;
     }
 
     .game-container {
+        display: flex;
         flex-direction: column;
+        flex-wrap: nowrap;
+        height: auto;
+        overflow: visible;
+        gap: 18px;
     }
 
     .game-card {
+        flex: 0 0 auto;
         width: 100%;
+        min-width: 0;
+        height: auto;
+        box-sizing: border-box;
     }
 }
+
